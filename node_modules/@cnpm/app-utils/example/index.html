@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>app-utils 示例</title>
+  <link rel="stylesheet" href="http://n2.static.pg0.cn/www/common/base/css/base.css"></link>
+</head>
+
+<body>
+  <div id="app-utils-container" class="app-utils-container">
+  </div>
+  <script src="http://n3.static.pg0.cn/fp/jquery/dist/jquery-1.9.1.js"></script>
+  <script src="../dist/app-utils.js"></script>
+  <script>
+    // 组件调用代码
+   console.info("是否是安卓的客户端:" + AppUtils.androidClient());
+   console.info("是否是ios的客户端:" + AppUtils.iosClient());
+   console.info("客户端的类型:" + AppUtils.clientType());
+   console.info("是否在微信中打开:" + AppUtils.wechatClient());
+   console.info("客户端app的类型:" + AppUtils.appClient("BeatifulChina"));
+   console.info("是否是手机端：" + AppUtils.isMobile());
+  </script>
+</body>
+</html>

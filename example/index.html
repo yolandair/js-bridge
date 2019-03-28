@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>js-bridge 示例</title>
+</head>
+
+<body>
+  <div id="js-bridge-container" class="js-bridge-container">
+    js-bridge组件
+  </div>
+  <script src="../dist/js-bridge.js"></script>
+  <script>
+    JSBridge.install();
+    JSBridge.onfire.on('wechatLoginEvent', function(returnObj){
+      console.info(returnObj.test);
+    })
+
+    JSBridge.dispatch('wechatLogin',{"test":"aa", "testb":"bb"});
+  </script>
+</body>
+
+</html>
